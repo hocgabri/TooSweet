@@ -16,4 +16,6 @@ public class Receipts {
     public void setmReceipts(List<Receipt> mReceipts) {
         this.mReceipts = mReceipts;
     }
+
+
 }
