@@ -7,7 +7,7 @@ package example.hackies.toosweet.Data;
 public class Article {
     private String mName;
     private int mBarCode;
-    private float mQuantity;
+    private float mQuantity; // Amount of this product, (i.e. kg for fruits, int for products)
     private float mSugarPerHundert;
 
     public String getmName() {

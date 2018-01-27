@@ -30,7 +30,7 @@ public class Receipts {
         return -1;
     }
 
-    public void loadCSV(){
+    public void loadCSV() {
         // LOAD CSV
         List<String> names = new ArrayList();
         InputStream inputStream = getResources().openRawResource(R.raw.receipts);
@@ -38,7 +38,7 @@ public class Receipts {
         List scoreList = csvFile.read();
 
         for (int i = 0; i < scoreList.size(); i++) {
-            List<String >row = (List<String>)scoreList.get(i);
+            List<String> row = (List<String>) scoreList.get(i);
             //Log.i("CSV", row.get(0).toString());
 
             //Load Columns
@@ -51,7 +51,7 @@ public class Receipts {
             String cash = row.get(8);
 
             //Create new Receipts, if not exist
-            if (getReceipts_position(TransactionNumber)==-1){
+            if (getReceipts_position(TransactionNumber) == -1) {
                 Receipt newReceipt = new Receipt(strDate, strTime, StoreName, TransactionNumber);
                 this.Receipts.add(newReceipt);
             }
