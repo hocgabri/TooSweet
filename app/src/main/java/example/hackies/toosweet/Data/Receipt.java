@@ -8,59 +8,58 @@ import java.util.List;
 
 public class Receipt {
     // TODO: Should we change to private and use get / set instaed
-    private String mDate;
-    private String mTime;
-    private String mStoreName;
-    private String mTransactionNumber;
-    List<ReceiptArticle> mReceiptArticles;
+    private String Date;
+    private String Time;
+    private String StoreName;
+    private String TransactionNumber;
+    List<ReceiptArticle> ReceiptArticles = new ArrayList();
 
-    public Receipt(String mDate, String mTime, String mStoreName, String mTransactionNumber, List<ReceiptArticle> mReceiptArticles) {
-        this.mDate = mDate;
-        this.mTime = mTime;
-        this.mStoreName = mStoreName;
-        this.mTransactionNumber = mTransactionNumber;
-        this.mReceiptArticles = mReceiptArticles;
+    public Receipt(String date, String time, String storeName, String transactionNumber) {
+        Date = date;
+        Time = time;
+        StoreName = storeName;
+        TransactionNumber = transactionNumber;
+        this.ReceiptArticles = new ArrayList();
     }
 
-
-    public String getmDate() {
-        return mDate;
+    public String getDate() {
+        return Date;
     }
 
-    public void setmDate(String mDate) {
-        this.mDate = mDate;
+    public void setDate(String date) {
+        Date = date;
     }
 
-    public String getmTime() {
-        return mTime;
+    public String getTime() {
+        return Time;
     }
 
-    public void setmTime(String mTime) {
-        this.mTime = mTime;
+    public void setTime(String time) {
+        Time = time;
     }
 
-    public String getmStoreName() {
-        return mStoreName;
+    public String getStoreName() {
+        return StoreName;
     }
 
-    public void setmStoreName(String mStoreName) {
-        this.mStoreName = mStoreName;
+    public void setStoreName(String storeName) {
+        StoreName = storeName;
     }
 
-    public String getmTransactionNumber() {
-        return mTransactionNumber;
+    public String getTransactionNumber() {
+        return TransactionNumber;
     }
 
-    public void setmTransactionNumber(String mTransactionNumber) {
-        this.mTransactionNumber = mTransactionNumber;
+    public void setTransactionNumber(String transactionNumber) {
+        TransactionNumber = transactionNumber;
     }
 
-    public List<ReceiptArticle> getmReceiptArticles() {
-        return mReceiptArticles;
+    public List<ReceiptArticle> getReceiptArticles() {
+        return ReceiptArticles;
     }
 
-    public void setmReceiptArticles(List<ReceiptArticle> mReceiptArticles) {
-        this.mReceiptArticles = mReceiptArticles;
+    public void setReceiptArticles(List<ReceiptArticle> receiptArticles) {
+        ReceiptArticles = receiptArticles;
     }
 
     public float getAbsoluteSugarofReceipt(){
