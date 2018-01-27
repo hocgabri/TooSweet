@@ -7,8 +7,8 @@ package example.hackies.toosweet.Data;
 public class Article {
     private String mName;
     private int mBarCode;
-    private int mQuantity;
-    private int msugar_per_hundert;
+    private float mQuantity;
+    private float mSugarPerHundert;
 
     public String getmName() {
         return mName;
@@ -26,7 +26,7 @@ public class Article {
         this.mBarCode = mBarCode;
     }
 
-    public int getmQuantity() {
+    public float getmQuantity() {
         return mQuantity;
     }
 
@@ -34,11 +34,16 @@ public class Article {
         this.mQuantity = mQuantity;
     }
 
-    public int getMsugar_per_hundert() {
-        return msugar_per_hundert;
+    public float getMsugar_per_hundert() {
+        return mSugarPerHundert;
     }
 
     public void setMsugar_per_hundert(int msugar_per_hundert) {
-        this.msugar_per_hundert = msugar_per_hundert;
+        this.mSugarPerHundert = msugar_per_hundert;
+    }
+
+    public float getAbsoluteSugar(){
+        return mQuantity * mSugarPerHundert / 100;
+
     }
 }

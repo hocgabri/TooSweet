@@ -6,6 +6,9 @@ package example.hackies.toosweet.Data;
 
 public class ReceiptArticle {
     private String mRawName;
+    private double mQuantity; // Amount of this product, (i.e. kg for fruits, int for products)
+    private  Article mArticle;
+
 
     public String getmRawName() {
         return mRawName;
@@ -23,5 +26,8 @@ public class ReceiptArticle {
         this.mQuantity = mQuantity;
     }
 
-    private double mQuantity; // Amount of this product, (i.e. kg for fruits, int for products)
+
+    public double getAbsoluteSugar(){
+        return mQuantity * mArticle.getAbsoluteSugar();
+    }
 }

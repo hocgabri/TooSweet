@@ -14,6 +14,15 @@ public class Receipt {
     private String mTransactionNumber;
     List<ReceiptArticle> mReceiptArticles;
 
+    public Receipt(String mDate, String mTime, String mStoreName, String mTransactionNumber, List<ReceiptArticle> mReceiptArticles) {
+        this.mDate = mDate;
+        this.mTime = mTime;
+        this.mStoreName = mStoreName;
+        this.mTransactionNumber = mTransactionNumber;
+        this.mReceiptArticles = mReceiptArticles;
+    }
+
+
     public String getmDate() {
         return mDate;
     }
@@ -52,5 +61,17 @@ public class Receipt {
 
     public void setmReceiptArticles(List<ReceiptArticle> mReceiptArticles) {
         this.mReceiptArticles = mReceiptArticles;
+    }
+
+    public float getAbsoluteSugarofReceipt(){
+        float absoluteTotalSugar = 0;
+
+        for (int i=0; i<mReceiptArticles.size(); i++) {
+            absoluteTotalSugar += mReceiptArticles.get(i).getAbsoluteSugar();
+        }
+        return absoluteTotalSugar;
+
+
+
     }
 }
